@@ -1,1 +1,1 @@
-echo"This is List";
+This is List
