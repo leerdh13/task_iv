@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="imgblock">
+            <img src="mulah_logo.png" class="mulah_logo">
+        </div>
+        <div class="text-title" style="font-size: 39px;">
+            Registration
+        </div>
+        <div class="text-desc" style="font-style: italic; margin-top: 10px;">
+            Please fill up your details.
+        </div>
+        <div class="reg-form">
+            <form id="formPage2">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="birthday">Birthday:</label><br>
+                <input type="date" id="birthday" name="birthday"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById('formPage2').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        var name = document.getElementById('name').value;
+        var birthday = document.getElementById('birthday').value;
+        var email = document.getElementById('email').value;
+        var number = localStorage.getItem('number');
+
+        // Store the data in local storage
+        localStorage.setItem('name', name);
+        localStorage.setItem('birthday', birthday);
+        localStorage.setItem('email', email);
+        localStorage.setItem('number', number);
+
+        // Redirect to page 3
+        window.location.href = 'page3.html';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="imgblock">
+                <img src="mulah_logo.png" class="mulah_logo">
+            </div>
+            <div class="text-desc">
+            <div id="displayData">
+                <!-- Data will be displayed here -->
+            </div>
+            </div>
+        </div>
+
+        <script>
+            window.onload = function() {
+            var name = localStorage.getItem('name');
+            var birthday = localStorage.getItem('birthday');
+            var email = localStorage.getItem('email');
+            var number = localStorage.getItem('number');
+            
+
+            var dataDiv = document.getElementById('displayData');
+            dataDiv.innerHTML = 'Name: ' + name + '<br>' +
+                                'Birthday: ' + birthday + '<br>' +
+                                'Email: ' + email + '<br>' +
+                                'Phone Number: ' + number;
+            };
+        </script>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="imgblock">
+            <img src="mulah_logo.png" class="mulah_logo">
+        </div>
+        <div class="text-title">
+            Hello,<br>
+            Welcome !
+        </div>
+        <div class="text-desc">
+            Check Your Loyalty Points & Rewards
+        </div>
+        <div class="phone-num">
+            <div class="select" style="display: flex;">
+                <select id="country_code" class="phone_num" style="height: 46px !important;margin-right: 30px;">
+                    <option value="60">+60</option>
+                    <option value="62">+62</option>
+                </select>
+                <input id="phone_number" placeholder="Enter mobile number" type="tel" style="height: 46px">
+            </div>
+        </div>
+        <div class="input-btn"><button type="button" onclick="checkLoyaltyPoints()"> Check Loyalty Points </button></div>
+    </div>
+    <script>
+        function checkLoyaltyPoints() {
+          var countryCode = document.getElementById("country_code").value;
+          var phoneNumber = document.getElementById("phone_number").value;
+          var fullPhoneNumber = "+" + countryCode + phoneNumber;
+          document.write(fullPhoneNumber);
+          localStorage.setItem('number', fullPhoneNumber);
+          if(fullPhoneNumber === "+60173527250") {
+            
+            // If the phone number is correct, redirect to page 2
+            window.location.href = "page2.html";
+          } else {
+            alert("Please enter a valid phone number.");
+          }
+        }
+        </script>
+</body>
+
+</html>
