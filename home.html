@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title Aggregator</title>
+</head>
+<body>
+    {% for title in titles %}
+        <p><a href="{{ title.link }}">{{ title.title }}</a></p>
+    {% endfor %}
+</body>
+</html>
