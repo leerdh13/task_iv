@@ -24,7 +24,8 @@ foreach($nodes as $i => $node) {
 
     // Only display the article if it was published in 2022 or later
     if ($date && $date->format('Y') >= 2022) {
-        echo "<a href='$url'>$title</a><br>";
+        echo "<a href='$url'>$title</a>";
+        echo "$date<br>";
     }
 }
 ?>
